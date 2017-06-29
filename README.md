@@ -11,7 +11,7 @@
 
 1. clone the repository
 
-        git clone https://ci.open-paas.org/stash/scm/olibs/charAPI.git
+        git clone https://ci.linagora.com/linagora/lgs/openpaas/char-api.git
 
 3. Code, execute tests then pull request !
 
