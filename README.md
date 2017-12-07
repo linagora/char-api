@@ -6,6 +6,21 @@
 
   Example:
   charAPI.getAsciiUpperCase('é') = 'E'
+  
+## Installing
+
+You can install charAPI.js via [npm](https://www.npmjs.com/), if you would like to
+use it in node:
+```
+npm install @linagora/char-api.js
+```
+
+Alternatively, it is also available via [bower](http://bower.io/) for front-end
+development:
+```
+bower install esn-char-api.js
+```
+
 
 ## How to contribute
 

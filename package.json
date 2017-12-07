@@ -1,6 +1,6 @@
 {
-  "name": "charAPI",
-  "version": "0.0.0",
+  "name": "@linagora/char-api",
+  "version": "0.1.0",
   "description": "This lib help to convert ascii character to alphabet [a-z]",
   "main": "lib/charAPI.js",
   "dependencies": {},
