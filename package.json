@@ -1,5 +1,5 @@
 {
-  "name": "char-api",
+  "name": "charAPI",
   "version": "0.1.1",
   "description": "This lib help to convert ascii character to alphabet [a-z]",
   "main": "lib/charAPI.js",
