@@ -4,7 +4,6 @@ module.exports = function(grunt) {
   var CI = grunt.option('ci');
 
   grunt.initConfig({
-    pkg: grunt.file.readJSON('package.json'),
     project: {
       lib: 'lib',
       test: 'test',
@@ -41,7 +40,7 @@ module.exports = function(grunt) {
       options: {
         jshintrc: '.jshintrc',
         reporter: CI && 'checkstyle',
-        reporterOutput: CI && 'jshint.xml'
+        reporterOutput: CI ? 'jshint.xml' : ''
       },
       all: {
         src: [
@@ -127,7 +126,17 @@ module.exports = function(grunt) {
     }
   });
 
-  require('load-grunt-tasks')(grunt);
+  grunt.loadNpmTasks('@linagora/grunt-lint-pattern');
+  grunt.loadNpmTasks('grunt-babel');
+  grunt.loadNpmTasks('grunt-contrib-clean');
+  grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-contrib-jshint');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-continue');
+  grunt.loadNpmTasks('grunt-gjslint');
+  grunt.loadNpmTasks('grunt-karma');
+
   grunt.registerTask('compile', 'Compile from ES6 to ES5', ['clean:dist', 'babel', 'concat:dist', 'uglify']);
   grunt.registerTask('dist', ['test']);
   grunt.registerTask('linters', 'Check code for lint', ['jshint:all', 'gjslint:all', 'lint_pattern:all']);
@@ -135,5 +144,4 @@ module.exports = function(grunt) {
   grunt.registerTask('dev', 'Launch tests then for each changes relaunch it', ['test', 'watch']);
 
   grunt.registerTask('default', ['test']);
-
 };
