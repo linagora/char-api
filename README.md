@@ -1,3 +1,5 @@
+![Archived](https://img.shields.io/badge/Current_Status-archived-blue?style=flat)
+
 # charAPI
 
   This repository provides a javascript lib to convert ascii character to alphabet [a-z] upper case.
